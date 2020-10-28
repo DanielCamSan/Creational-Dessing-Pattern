@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CreationalDessignPattern.Factory
 {
-    public class ConcreteCreditCardFactory:CreditCardFactory
+    public class ConcreteCreditCardFactory :CreditCardFactory
     {
         public override ICreditCard GetCreditCard(string CreditCard)
         {

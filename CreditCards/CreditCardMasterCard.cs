@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static CreationalDessignPattern.CreditCards.ICreditCard;
 
 namespace CreationalDessignPattern.CreditCards
 {
@@ -10,7 +11,7 @@ namespace CreationalDessignPattern.CreditCards
         private int _pan;
         private int _code;
         private DateTime _expirationDate;
-        private const string brand = "Visa";
+        private Brand _brand = Brand.Mastercard;
         private decimal _actualMoney;
 
         public CreditCardMasterCard(decimal actualMoney = 0)
@@ -44,7 +45,7 @@ namespace CreationalDessignPattern.CreditCards
         }
         public string GetBrand()
         {
-            return $"The brand is {brand}, Thank You!.";
+            return $"The brand is {_brand}, Thank You!.";
         }
 
         public CreditCardHolderInfo GetHolderInfo()

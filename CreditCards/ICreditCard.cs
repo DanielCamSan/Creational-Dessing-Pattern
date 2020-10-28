@@ -10,6 +10,7 @@ namespace CreationalDessignPattern.CreditCards
         public int Code { get; set; }
         public DateTime ExpirationDate { get; set; }
         public string Owner { get; set; }
+        public enum Brand { Mastercard, Visa};
         CreditCardHolderInfo GetHolderInfo();
         string GetBrand();
         void DepositeCash(decimal amount);
